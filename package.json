@@ -17,6 +17,7 @@
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.2.0",
     "koa-router": "^7.1.0",
+    "koa-session": "^3.4.0",
     "ts-node": "^2.0.0",
     "typescript": "^2.1.5"
   }

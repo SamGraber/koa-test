@@ -3,3 +3,6 @@
 
 # Editor settings
 /.vscode/
+
+# secret keys
+/config/keys.*
