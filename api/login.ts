@@ -28,7 +28,7 @@ function stripPassword(user) {
 
 export function authenticate() {
 	return (context: Koa.Context, next: { (): Promise<any> }) => {
-		if (context.request.path == '/login') {
+		if (context.request.path == '/login' || context.request.path == '/test.html') {
 			return next();
 		}
 		
