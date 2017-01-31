@@ -2,7 +2,7 @@ import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
 import * as session from 'koa-session';
 import * as serve from 'koa-static';
-import { router } from './routes';
+import { router } from './api';
 import { keys }from './config/keys';
 
 export const app = new Koa();
