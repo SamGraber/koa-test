@@ -1,22 +1,14 @@
 import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
-import * as session from 'koa-session';
 import * as serve from 'koa-static';
 import { router } from './api';
-import { keys }from './config/keys';
+import { authenticate } from './api/login';
 
 export const app = new Koa();
 const port = process.env.npm_package_config_port || 3000;
-app.keys = keys;
 
 app.use(errorHandler());
-app.use(session(app));
-app.use((context, next) => {
-	if ((context as any).session.authenticated || context.request.path == '/login' || context.request.path == '/logout') {
-		return next();
-	}
-	this.status = 401;
-});
+app.use(authenticate());
    
 app.use(serve(__dirname));
 

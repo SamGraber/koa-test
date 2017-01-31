@@ -9,4 +9,5 @@ export function configureBaseRoutes(router: Router) {
 		context.body = 'Nice!';
 	});
 	router.get('*', context => context.body = 'Hello World');
+	return router;
 }
