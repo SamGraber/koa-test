@@ -1,6 +1,7 @@
 import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
 import * as session from 'koa-session';
+import * as serve from 'koa-static';
 import { router } from './routes';
 import { keys }from './config/keys';
 
@@ -16,7 +17,11 @@ app.use((context, next) => {
 	}
 	this.status = 401;
 });
+   
+app.use(serve(__dirname));
+
 app.use(bodyParser());
+
 app.use(router.routes())
    .use(router.allowedMethods());
 
