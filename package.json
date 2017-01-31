@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@types/koa": "^2.0.37",
+    "@types/koa-bodyparser": "^3.0.23",
     "@types/koa-router": "^7.0.21",
     "@types/node": "^7.0.4",
     "koa": "^2.0.0",
+    "koa-bodyparser": "^3.2.0",
     "koa-router": "^7.1.0",
     "ts-node": "^2.0.0",
     "typescript": "^2.1.5"
